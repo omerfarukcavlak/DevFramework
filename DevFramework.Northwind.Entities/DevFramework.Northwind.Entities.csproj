@@ -41,7 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concrete\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ComplexTypes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DevFramework.Core\DevFramework.Core.csproj">
+      <Project>{491BF720-92E3-46B0-97A6-910741F81734}</Project>
+      <Name>DevFramework.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
