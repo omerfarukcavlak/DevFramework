@@ -28,5 +28,25 @@ namespace DevFramework.DataAccess.Tests.NHibernateTests
             Assert.AreEqual(4, result.Count);
 
         }
+
+        [TestMethod]
+        public void Get_all_returns_all_categories()
+        {
+            NhCategoryDal categoryDal = new NhCategoryDal(new SqlServerHelper());
+
+            var result = categoryDal.GetList();
+
+            Assert.AreEqual(8, result.Count);
+        }
+
+        [TestMethod]
+        public void Get_all_with_parameter_returns_filtered_categories()
+        {
+            NhCategoryDal categoryDal = new NhCategoryDal(new SqlServerHelper());
+            var result = categoryDal.GetList(p=>p.CategoryName.Contains("od"));
+
+            Assert.AreEqual(3, result.Count);
+
+        }
     }
 }
