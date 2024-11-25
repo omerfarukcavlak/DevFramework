@@ -2,15 +2,12 @@
 using FluentValidation;
 using PostSharp.Aspects;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DevFramework.Core.Aspects.Postsharp
+namespace DevFramework.Core.Aspects.Postsharp.ValidationAspects
 {
     [Serializable]
-    public class FluentValidationAspect:OnMethodBoundaryAspect
+    public class FluentValidationAspect : OnMethodBoundaryAspect
     {
         Type _validatorType;
 
@@ -23,11 +20,11 @@ namespace DevFramework.Core.Aspects.Postsharp
         {
             var validator = (IValidator)Activator.CreateInstance(_validatorType);
             var entityType = _validatorType.BaseType.GetGenericArguments()[0];
-            var entities = args.Arguments.Where(t=>t.GetType()==entityType);
+            var entities = args.Arguments.Where(t => t.GetType() == entityType);
 
             foreach (var entity in entities)
             {
-                ValidatorTool.FluentValidate(validator,entity);
+                ValidatorTool.FluentValidate(validator, entity);
             }
         }
     }
