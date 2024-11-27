@@ -101,6 +101,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <None Include=".editorconfig" />
+    <Content Include="log4net.config" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
