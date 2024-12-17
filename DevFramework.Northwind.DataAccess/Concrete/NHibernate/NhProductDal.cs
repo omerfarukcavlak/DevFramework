@@ -2,6 +2,7 @@
 using DevFramework.Northwind.DataAccess.Abstract;
 using DevFramework.Northwind.Entities.ComplexTypes;
 using DevFramework.Northwind.Entities.Concrete;
+using NHibernate.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;

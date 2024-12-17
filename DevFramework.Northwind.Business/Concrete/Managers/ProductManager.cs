@@ -19,6 +19,7 @@ using System.Transactions;
 
 namespace DevFramework.Northwind.Business.Concrete.Managers
 {
+   
     public class ProductManager : IProductService
     {
         private IProductDal _productDal;
@@ -30,6 +31,7 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
 
         [FluentValidationAspect(typeof(ProductValidator))]
         [CacheRemoveAspect(typeof(MemoryCacheManager))]
+
         public Product Add(Product product)
         {
             return _productDal.Add(product);
@@ -50,8 +52,6 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
         }
 
         [CacheAspect(typeof(MemoryCacheManager))]
-        [LogAspect(typeof(DatabaseLogger))]
-        [LogAspect(typeof(FileLogger))]
         public List<Product> GetAll()
         {
             return _productDal.GetList();
@@ -63,6 +63,7 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
         }
 
         [TransactionScopeAspect]
+        [FluentValidationAspect(typeof(ProductValidator))]
         public void TransactionalOperation(Product product1, Product product2)
         {
             _productDal.Add(product1);

@@ -3,11 +3,8 @@ using DevFramework.Core.CrossCuttingConcerns.Logging.Log4Net;
 using PostSharp.Aspects;
 using PostSharp.Extensibility;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevFramework.Core.Aspects.Postsharp.LogAspects
 {
@@ -15,8 +12,8 @@ namespace DevFramework.Core.Aspects.Postsharp.LogAspects
     [MulticastAttributeUsage(MulticastTargets.Method, TargetMemberAttributes = MulticastAttributes.Instance)]
     public class LogAspect : OnMethodBoundaryAspect
     {
-        Type _loggerType;
-        LoggerService _loggerService;
+        private Type _loggerType;
+        private LoggerService _loggerService;
         public LogAspect(Type loggerType)
         {
             _loggerType = loggerType;
@@ -49,7 +46,7 @@ namespace DevFramework.Core.Aspects.Postsharp.LogAspects
 
                 var logDetail = new LogDetail
                 {
-                    FullName = args.Method.DeclaringType == null ? null : args.Method.DeclaringType.FullName,
+                    FullName = args.Method.DeclaringType == null ? null : args.Method.DeclaringType.Name,
                     MethodName = args.Method.Name,
                     Parameters = logParameters
                 };
@@ -58,9 +55,9 @@ namespace DevFramework.Core.Aspects.Postsharp.LogAspects
             }
             catch (Exception)
             {
-                 
+
             }
-            
+
         }
     }
 }

@@ -6,7 +6,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{71AB0514-2986-4FFA-A3D7-D7C08B356EA5}</ProjectGuid>
+    <ProjectGuid>{384E7EB5-2464-4CDE-9D65-B508560D0FD4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DevFramework.DataAccess.Tests</RootNamespace>
@@ -72,7 +72,7 @@
       <Name>DevFramework.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\DevFramework.Northwind.DataAccess\DevFramework.Northwind.DataAccess.csproj">
-      <Project>{de1558e7-1cdb-42f4-be67-85832ab162ff}</Project>
+      <Project>{DE1558E7-1CDB-42F4-BE67-85832AB162FF}</Project>
       <Name>DevFramework.Northwind.DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\DevFramework.Northwind.Entities\DevFramework.Northwind.Entities.csproj">
