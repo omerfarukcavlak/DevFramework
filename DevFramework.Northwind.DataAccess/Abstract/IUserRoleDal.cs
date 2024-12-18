@@ -1,5 +1,6 @@
 ﻿using DevFramework.Core.DataAccess;
-using DevFramework.Northwind.Entities.ComplexTypes;
+using DevFramework.Core.DataAccess.EntityFramework;
+using DevFramework.Northwind.DataAccess.Concrete.EntityFramework;
 using DevFramework.Northwind.Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -9,8 +10,7 @@ using System.Threading.Tasks;
 
 namespace DevFramework.Northwind.DataAccess.Abstract
 {
-    public interface IProductDal:IEntityRepository<Product>
+    public interface IUserRoleDal : IEntityRepository<UserRole>
     {
-        List<ProductDetail> GetProductDetails();
     }
 }

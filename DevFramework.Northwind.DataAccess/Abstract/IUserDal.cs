@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace DevFramework.Northwind.DataAccess.Abstract
 {
-    public interface IProductDal:IEntityRepository<Product>
+    public interface IUserDal :IEntityRepository<User>
     {
-        List<ProductDetail> GetProductDetails();
+        List<UserRoleItem> GetUserRoles(User user);
     }
 }

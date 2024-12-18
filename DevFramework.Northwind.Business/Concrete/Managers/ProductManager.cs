@@ -1,4 +1,5 @@
-﻿using DevFramework.Core.Aspects.Postsharp.CacheAspect;
+﻿using DevFramework.Core.Aspects.Postsharp.AuthorizationAspects;
+using DevFramework.Core.Aspects.Postsharp.CacheAspect;
 using DevFramework.Core.Aspects.Postsharp.LogAspects;
 using DevFramework.Core.Aspects.Postsharp.PerformanceAspects;
 using DevFramework.Core.Aspects.Postsharp.TransactionAspects;
@@ -56,6 +57,7 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
 
         [CacheAspect(typeof(MemoryCacheManager))]
         [PerformanceCounterAspect(2)]
+        [SecuredOperation(Roles="Admin,Editor,Student")]
         public List<Product> GetAll()
         {
            // Thread.Sleep(3000);
