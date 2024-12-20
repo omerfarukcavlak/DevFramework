@@ -20,7 +20,7 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
     public class ProductManager : IProductService
     {
         private IProductDal _productDal;
-        private IMapper _mapper;
+        private readonly IMapper _mapper;
         public ProductManager(IProductDal productDal, IMapper mapper)
         {
             _productDal = productDal;
@@ -51,7 +51,7 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
 
         [CacheAspect(typeof(MemoryCacheManager))]
         [PerformanceCounterAspect(2)]
-        // [SecuredOperation(Roles="Admin,Editor,Student")]
+        [SecuredOperation(Roles = "Admin,Editor,Student")]
         public List<Product> GetAll()
         {
             List<Product> products = _mapper.Map<List<Product>>(_productDal.GetList());

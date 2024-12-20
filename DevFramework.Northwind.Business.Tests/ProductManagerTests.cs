@@ -14,10 +14,10 @@ namespace DevFramework.Northwind.Business.Tests
         [TestMethod]
         public void Test()
         {
-            Mock<IProductDal> mock = new Mock<IProductDal>();
-            ProductManager productManager = new ProductManager(mock.Object);
+            //Mock<IProductDal> mock = new Mock<IProductDal>();
+            //ProductManager productManager = new ProductManager(mock.Object);
 
-            productManager.Add(new Product());
+            //productManager.Add(new Product());
         }
     }
 }

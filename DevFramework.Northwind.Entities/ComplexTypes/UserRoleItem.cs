@@ -8,7 +8,7 @@ namespace DevFramework.Northwind.Entities.ComplexTypes
 {
     public class UserRoleItem
     {
-        public virtual string RoleName { get; set; }
+        public string RoleName { get; set; }
 
     }
 }
