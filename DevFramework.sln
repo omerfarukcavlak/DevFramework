@@ -14,6 +14,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DevFramework.Northwind.WcfService", "DevFramework.Northwind.WcfService\", "{69633D43-4196-4FDA-A995-769A88B31BD9}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8.1"
+		ProjectReferences = "{e83c3c9d-930b-4618-bd60-0a8f4ef9bb6b}|DevFramework.Northwind.Business.dll;{491BF720-92E3-46B0-97A6-910741F81734}|DevFramework.Core.dll;{DE1558E7-1CDB-42F4-BE67-85832AB162FF}|DevFramework.Northwind.DataAccess.dll;{CB4A53F3-4C90-45E6-8FF1-3A8286346C7A}|DevFramework.Northwind.Entities.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_63623"
 		Debug.AspNetCompiler.PhysicalPath = "DevFramework.Northwind.WcfService\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63623\"
@@ -42,6 +43,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.DataAccess.Tests", "DevFramework.Northwind.DataAccess.Tests\DevFramework.Northwind.DataAccess.Tests.csproj", "{384E7EB5-2464-4CDE-9D65-B508560D0FD4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.WebApi", "DevFramework.Northwind.WebApi\DevFramework.Northwind.WebApi.csproj", "{07FEAAFB-29FE-4117-8F5C-028A83BEC13B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.MvcAngularUI", "DevFramework.Northwind.MvcAngularUI\DevFramework.Northwind.MvcAngularUI.csproj", "{0F6D60A3-0C70-474B-B52F-80A811949354}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,6 +92,10 @@ Global
 		{07FEAAFB-29FE-4117-8F5C-028A83BEC13B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07FEAAFB-29FE-4117-8F5C-028A83BEC13B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07FEAAFB-29FE-4117-8F5C-028A83BEC13B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F6D60A3-0C70-474B-B52F-80A811949354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F6D60A3-0C70-474B-B52F-80A811949354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F6D60A3-0C70-474B-B52F-80A811949354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F6D60A3-0C70-474B-B52F-80A811949354}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

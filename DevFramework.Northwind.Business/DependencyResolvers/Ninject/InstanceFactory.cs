@@ -1,9 +1,4 @@
 ﻿using Ninject;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevFramework.Northwind.Business.DependencyResolvers.Ninject
 {
@@ -11,7 +6,7 @@ namespace DevFramework.Northwind.Business.DependencyResolvers.Ninject
     {
         public static T GetIsntance<T>()
         {
-            var kernel = new StandardKernel(new BusinessModule());
+            var kernel = new StandardKernel(new BusinessModule(),new AutoMapperModule());
             return kernel.Get<T>();
         }
     }
